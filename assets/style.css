@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+:root {
+    --primary-clr-100: hsla(172, 67%, 85%);
+    --primary-clr: hsl(172, 67%, 45%);
+
+    --very-dary-cyan: hsl(183, 100%, 15%);
+    /* --very-dary-cyan-100: hsla(183, 100%, 15%, 2); */
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --dark-grayish-cyan-100: hsla(186, 14%, 43%, .8);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+ 
+    --font-size: 24px;
+    /* --font-family: ; */
+    --font-family: 'Space Mono', monospace;
+
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-weight: 700;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-grayish-cyan);
+
+}
+header {
+    margin-block: min(3em, 5vh);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-color: var(--White);
+    border-radius: 2em;
+    padding: 1.5em;
+    width: 100%;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+}
+.text {
+    color: var(--dark-grayish-cyan)
+}
+.mg-block {
+    margin-block: 1em;
+}
+.tip-content {
+    margin-block-end: 1em;
+}
+.tip-wrapper {
+    font-size: var(--font-size);
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;   
+    grid-template-areas: 
+        '5 10'
+        '15 25'
+        '50 custom'
+        ;
+}
+.tip-wrapper p {
+    text-align: center;
+    padding: .7em;
+    background-color: var(--very-dary-cyan);
+    border-radius: 7px;
+    color: var(--Very-light-grayish-cyan);
+}
+.form-control {
+    border: none;
+    position: relative;
+    border-radius: 7px;
+    background-color: #f4f4f4;
+    margin-top: .5em;
+}
+input {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    outline: none;
+    text-align: right;
+    border-radius: 7px;
+    font-size: 1em;
+    color: var(--very-dary-cyan);
+    border: 2px solid transparent;
+    background-color: transparent;
+}
+
+/* Remove the arrow in the input field */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* For Firefox */
+input {
+    -moz-appearance: textfield;
+}
+/* .form-control, */
+input:focus{
+    border-color: var(--primary-clr);
+}
+.bill img {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+}
+
+#custom {
+    outline: none;
+    padding: 0.5em 1em;
+    background-color: #f4f4f4 !important;
+    color: var(--dark-grayish-cyan) !important;
+}
+#custom::placeholder {
+    text-align: center;
+}
+.detail-box {
+    display: flex;
+    justify-content: space-between;
+}
+.err {
+    border: 2px solid coral;
+}
+.err-msg {
+    display: none;
+    color: coral;
+}
+
+.active {
+    background-color: var(--primary-clr-100) !important;
+    color: var(--very-dary-cyan) !important;
+}
+
+/* Right content */
+
+.right-content {
+    background-color: var(--very-dary-cyan);
+    padding: 2em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.5em;
+}
+.wraper {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.tip-amount,
+.person {
+    display: flex;
+    justify-content: space-between;
+}
+.tip-title {
+    font-size: 1.2em;
+    color: var(--Very-light-grayish-cyan);
+    margin-bottom: .2em;
+}
+
+.tip-left p {
+    color: var(--Grayish-cyan);
+}
+
+.tip-right h3 {
+    color: var(--primary-clr);
+    font-size: 2.5em;
+}
+button {
+    padding: .5em;
+    background-color: var(--primary-clr);
+    border: none;
+    border-radius: 7px;
+    text-transform: uppercase;
+    color: var(--very-dary-cyan);
+    font-size: 1.5em;
+}
+button:hover {
+    background-color: var(--primary-clr-100);
+}
+
+button:active {
+    background-color: var(--dark-grayish-cyan-100);
+}
+/* Large Screens */
+
+@media screen and (min-width: 775px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-direction: row;
+        justify-content: space-between;
+        width: min(50em, 80%);
+    }
+
+}

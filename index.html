@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <script src="assets/script.js" defer></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body> 
+
+  <header>
+    <img src="assets/images/logo.svg" alt="logo">
+  </header>
+  <main>
+    <section class="left">
+      <div class="bill">
+        <label class="text" for="bill">Bill</label>
+        <div class="form-control">
+          <input type="number" id="bill" placeholder="0" min="0" required>
+          <img src="assets/images/icon-dollar.svg" alt="">
+        </div>
+      </div>
+
+      <div class="tip-content">
+        <p class="mg-block text">Select Tip %</p>
+        <div class="tip-wrapper">
+          <p class="ti">5%</p>
+          <p class="ti">10%</p>
+          <p class="ti">15%</p>
+          <p class="ti">25%</p>
+          <p class="ti">50%</p>
+          <input class="ti custom" type="number" placeholder="Custom" min="0" id="custom">
+          <!-- <p class="custom text" contenteditable="true">Custom</p> -->
+        </div>
+      </div>
+
+      <div class="number-of-pple bill">
+        <div class="detail-box mg-block">
+          <label class=" text">Number of People</label>
+          <p class="err-msg">Can't be zero</p>
+        </div>
+        <div class="form-control">
+          <input type="number" placeholder="0" id="number-of-people" min="0" required>
+          <img src="assets/images/icon-person.svg" alt="">
+        </div>
+      </div>
+    </section>  
+
+    <section class="right-content">
+      
+      <div class="wraper">
+
+        <div class="tip-amount">
+          <div class="tip-left">
+            <h2 class="tip-title">Tip Amount</h2>
+            <p>/ person</p>
+          </div>
+          <div class="tip-right">
+            <h3 class="display-total-tip-amount">$0.00</h3>
+          </div>
+        </div>
+  
+        <div class="person">
+          <div class="tip-left">
+            <h2 class="tip-title">Total</h2>
+            <p>/ person</p>
+          </div>
+          <div class="tip-right">
+            <h3 class="display-total-person">$0.00</h3>
+          </div>
+        </div>
+        
+      </div>
+      <button class="reset-btn">Reset</button>
+    </section>
+  </main>
+</body>
+</html>
